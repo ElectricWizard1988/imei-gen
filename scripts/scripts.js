@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
       console.log(imeiNumbers.join('\n'))
     });
     
-    // MAIN FUNCTION GOES HERE
+    // MAIN FUNCTION
     function generateIMEI() {
         const rbi = ["01", "10", "30", "33", "35", "44", "45", "49", "50", "51", "52", "53", "54", "86", "91", "98", "99"];
         let imei = [Number(rbi[Math.floor(Math.random() * rbi.length)]), ...Array.from({ length: 6 }, () => Math.floor(Math.random() * 10)), 0, ...Array.from({ length: 5 }, () => Math.floor(Math.random() * 10))];
