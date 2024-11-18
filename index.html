@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IMEI Generator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="scripts/scripts.js"></script>
+</head>
+<body>
+    <label for="imei-count">IMEI Count</label>
+        <div class="input-with-button">
+            <input type="number" id="imei-count" min="1" max="999" value="1">
+            <button id="generatebtn" class="btn">Generate</button>
+        </div>
+
+    <br><br>
+
+    <label for="imei-list">IMEIs</label>
+    <textarea id="imei-list" rows="10" readonly></textarea>
+    <button id="copybtn" class="btn">Copy to clipboard</button>
+
+</body>
+</html>
