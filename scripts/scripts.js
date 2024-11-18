@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const copybtn = document.getElementById("copybtn")
 
     copybtn.addEventListener('click', function() {
-        var textToCopy = document.getElementById("imei-list").value;
+        var textToCopy = document.getElementById("imei-list").textContent;
         navigator.clipboard.writeText(textToCopy);
         alert('Copied to clipboard!')
       });
