@@ -12,27 +12,31 @@
           flex-direction: column;
           align-items: center;
           justify-content: center;
-          height: 100vh;
-          padding: 20px;
+          height: auto;
+          padding: 15px;
+      }
+
+      label {
+        font-size: 20px;
+        font-weight: 600;
       }
 
       .input-with-button {
           display: flex;
           align-items: center;
-          margin-bottom: 20px;
       }
 
       .input-with-button input {
           flex-grow: 1;
           padding: 10px;
-          font-size: 16px;
+          font-size: 12px;
           border: 1px solid #ccc;
           border-radius: 4px 0 0 4px;
       }
 
-      .input-with-button button {
-          padding: 10px 20px;
-          font-size: 16px;
+      .btn {
+          padding: 11px 10px;
+          font-size: 12px;
           background-color: #007bff;
           color: #fff;
           border: none;
@@ -40,31 +44,43 @@
           cursor: pointer;
       }
 
-      .input-with-button button:hover {
+      .btn:hover {
           background-color: #0056b3;
       }
 
+      .btn:active {
+        transform: translateY(1px);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+      #copy {
+        position: absolute; 
+        top: 1px; 
+        right: 2px;
+      }
+
       #imei-list {
-          width: 100%;
-          max-width: 600px;
-          padding: 10px;
-          font-size: 16px;
+          width: auto;
+          padding: 8px;
+          font-size: 15px;
           border: 1px solid #ccc;
           border-radius: 4px;
-          resize: none;
+          font-family: monospace;
+          white-space: pre;
+          column-count: 3;
+          column-width: 10em;
+          height: auto;
+          position: relative;
       }
 
-      #copybtn {
-          margin-top: 10px;
-          padding: 10px 20px;
-          font-size: 16px;
-          background-color: #28a745;
-          color: #fff;
-          border: none;
-          border-radius: 4px;
-          cursor: pointer;
+      .icon {
+        width: 2.1em;
+        height: 2.1em;
+        cursor: pointer;
+        margin-left: 2px;
+        display: inline;
       }
 
-      #copybtn:hover {
-          background-color: #218838;
+      .icon:active {
+        transform: translateY(1px);
       }

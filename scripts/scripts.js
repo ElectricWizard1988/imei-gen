@@ -1,7 +1,6 @@
 
 document.addEventListener('DOMContentLoaded', function() {
 
-    //GENERATE BUTTON
     const generateBtn = document.getElementById('generatebtn');
     const numberInput = document.getElementById('imei-count');
     const textArea = document.getElementById('imei-list');
@@ -9,11 +8,10 @@ document.addEventListener('DOMContentLoaded', function() {
     generateBtn.addEventListener('click', function() {
       const number = numberInput.value;
       const imeiNumbers = generateIMEIs(number);
-      textArea.value = imeiNumbers.join('\n');
+      textArea.textContent = imeiNumbers.join('\n');
       console.log(imeiNumbers.join('\n'))
     });
     
-    // MAIN FUNCTION
     function generateIMEI() {
         const rbi = ["01", "10", "30", "33", "35", "44", "45", "49", "50", "51", "52", "53", "54", "86", "91", "98", "99"];
         let imei = [Number(rbi[Math.floor(Math.random() * rbi.length)]), ...Array.from({ length: 6 }, () => Math.floor(Math.random() * 10)), 0, ...Array.from({ length: 5 }, () => Math.floor(Math.random() * 10))];
@@ -27,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let sum = 0;
         for (let i = 0; i < imeiStr.length; i++) {
           let digit = parseInt(imeiStr[i]);
-          if (i % 2 === 0) {
+          if ((imeiStr.length - i) % 2 !== 0) {
             digit *= 2;
             if (digit > 9) {
               digit -= 9;
@@ -35,7 +33,6 @@ document.addEventListener('DOMContentLoaded', function() {
           }
           sum += digit;
         }
-        console.log(imeiStr+'(' + imeiStr.length)
         return (10 - (sum % 10)) % 10;
       }
       
@@ -58,18 +55,16 @@ document.addEventListener('DOMContentLoaded', function() {
       function generateIMEIs(num) {
         const imeis = [];
         for (let i = 0; i < num; i++) {
-          const imei = generateIMEI();
-          if (isValidIMEI(imei)) {
-            imeis.push(imei);
-          } else {
-            imeis.push(`IMEI ${imei} is not valid`);
+          let imei = generateIMEI();
+          while (!isValidIMEI(imei)) {
+            imei = generateIMEI();
           }
+          imeis.push(imei);
         }
-        console.log(imeis)
+        console.log(imeis);
         return imeis;
       }
 
-    // COPY BUTTON
     const copybtn = document.getElementById("copybtn")
 
     copybtn.addEventListener('click', function() {
@@ -77,7 +72,5 @@ document.addEventListener('DOMContentLoaded', function() {
         navigator.clipboard.writeText(textToCopy);
         alert('Copied to clipboard!')
       });
-
-
   });
 
