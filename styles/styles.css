@@ -2,9 +2,9 @@
           margin: 0;
           padding: 0;
           box-sizing: border-box;
-      }
+        }
 
-      body {
+        body {
           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
           background-color: #d7d7d7;
           display: flex;
@@ -13,28 +13,28 @@
           justify-content: center;
           height: auto;
           padding: 15px;
-      }
+        }
 
-      label {
-        font-size: 20px;
-        font-weight: 600;
-      }
+        label {
+          font-size: 20px;
+          font-weight: 600;
+        }
 
-      .input-with-button {
+        .input-with-button {
           display: flex;
           align-items: center;
           position: relative;
-      }
+        }
 
-      .input-with-button input {
+        .input-with-button input {
           flex-grow: 1;
           padding: 10px;
           font-size: 12px;
           border: 1px solid #ccc;
           border-radius: 4px 0 0 4px;
-      }
+        }
 
-      .btn {
+        .btn {
           padding: 11px 10px;
           font-size: 12px;
           background-color: #007bff;
@@ -42,18 +42,18 @@
           border: none;
           border-radius: 0 4px 4px 0;
           cursor: pointer;
-      }
+        }
 
-      .btn:hover {
+        .btn:hover {
           background-color: #0056b3;
-      }
+        }
 
-      .btn:active {
-        transform: translateY(1px);
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
+        .btn:active {
+          transform: translateY(1px);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
 
-      #imei-list {
+        #imei-list {
           width: auto;
           padding: 8px;
           font-size: 15px;
@@ -66,28 +66,28 @@
           column-width: 10em;
           height: auto;
           position: relative;
-      }
+        }
 
-      .icon {
-        width: 1.8em;
-        height: 1.8em;
-        cursor: pointer;
-        margin-left: 2px;
-        display: inline;
-      }
+        .icon {
+          width: 1.8em;
+          height: 1.8em;
+          cursor: pointer;
+          margin-left: 2px;
+          display: inline;
+        }
 
-      .icon:active {
-        transform: translateY(1px);
-      }
+        .icon:active {
+          transform: translateY(1px);
+        }
 
-      #copybtn {
-        position: absolute;
-        top: 2px;
-        right: 2px;
-        opacity: 0.5;
-        transition: opacity 0.3s ease;
-      }
-      
-      #copybtn:hover {
-        opacity: 1;
-      }
+        #copybtn {
+          position: absolute;
+          top: 2px;
+          right: 2px;
+          opacity: 0.5;
+          transition: opacity 0.3s ease;
+        }
+
+        #copybtn:hover {
+          opacity: 1;
+        }
