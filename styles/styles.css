@@ -7,7 +7,7 @@
 
       body {
           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-          background-color: #f5f5f5;
+          background-color: #d7d7d7;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -53,12 +53,6 @@
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
-      #copy {
-        position: absolute; 
-        top: 1px; 
-        right: 2px;
-      }
-
       #imei-list {
           width: auto;
           padding: 8px;
@@ -66,6 +60,7 @@
           border: 1px solid #ccc;
           border-radius: 4px;
           font-family: monospace;
+          background-color: #f5f5f5;
           white-space: pre;
           column-count: 5;
           column-width: 10em;

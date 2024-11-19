@@ -6,10 +6,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const textArea = document.getElementById('imei-list');
     
     generateBtn.addEventListener('click', function() {
-      const number = numberInput.value;
-      const imeiNumbers = generateIMEIs(number);
-      textArea.textContent = imeiNumbers.join('\n');
-      console.log(imeiNumbers.join('\n'))
+      let number = numberInput.value;
+      if (number > 1000) {
+        number = 1000;
+        numberInput.value = 1000
+      } else if (number == 0) {
+        alert("👀 Nice try...")
+      } else {
+        const imeiNumbers = generateIMEIs(number);
+        textArea.textContent = imeiNumbers.join('\n');
+        console.log(imeiNumbers.join);
+      }
     });
     
     function generateIMEI() {
@@ -72,5 +79,5 @@ document.addEventListener('DOMContentLoaded', function() {
         navigator.clipboard.writeText(textToCopy);
         alert('Copied to clipboard!')
       });
+      
   });
-
