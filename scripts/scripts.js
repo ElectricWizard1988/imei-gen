@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
       if (number > 1000) {
         number = 1000;
         numberInput.value = 1000
+        alert("Limit = 1000")
       } else if (number == 0) {
         alert("👀 Nice try...")
       } else {
